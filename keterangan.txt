@@ -1,0 +1,11 @@
+NAMA : RIMA REGIANI
+NIS :11605792
+ROMBEL : RPL XI-2
+
+laporan menggunakan PHP
+file : penjualanelektronik
+
+project
+file:penjualanelektronikrima
+
+database : elektronik
