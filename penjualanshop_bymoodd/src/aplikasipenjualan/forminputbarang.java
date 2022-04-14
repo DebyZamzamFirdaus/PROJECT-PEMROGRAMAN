@@ -25,11 +25,13 @@ public class forminputbarang extends javax.swing.JFrame {
 
         tabelinput.setModel(model);
 
-        model.addColumn("kd_barang");
+        model.addColumn("id_barang");
         model.addColumn("nama_barang");
         model.addColumn("jumlah_barang");
         model.addColumn("harga_beli");
         model.addColumn("harga_jual");
+        model.addColumn("tgl_pemasokan");
+
         loadData();
         kode();
         
@@ -140,7 +142,9 @@ public class forminputbarang extends javax.swing.JFrame {
         tcari = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         exit = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 51, 51));
@@ -156,12 +160,12 @@ public class forminputbarang extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Kode Barang");
+        jLabel3.setText("Id_Barang");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Nama Barang");
+        jLabel4.setText("Nama_Barang");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -216,7 +220,7 @@ public class forminputbarang extends javax.swing.JFrame {
                 beditActionPerformed(evt);
             }
         });
-        jPanel1.add(bedit, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 100, 50));
+        jPanel1.add(bedit, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 100, 30));
 
         bsimpan.setText("SIMPAN");
         bsimpan.addActionListener(new java.awt.event.ActionListener() {
@@ -224,7 +228,7 @@ public class forminputbarang extends javax.swing.JFrame {
                 bsimpanActionPerformed(evt);
             }
         });
-        jPanel1.add(bsimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 100, 50));
+        jPanel1.add(bsimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 100, 30));
 
         bhapus.setText("HAPUS");
         bhapus.addActionListener(new java.awt.event.ActionListener() {
@@ -232,7 +236,7 @@ public class forminputbarang extends javax.swing.JFrame {
                 bhapusActionPerformed(evt);
             }
         });
-        jPanel1.add(bhapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 100, 50));
+        jPanel1.add(bhapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 60, 100, 30));
 
         tabelinput.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -252,12 +256,12 @@ public class forminputbarang extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelinput);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 770, 180));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 770, 180));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Harga Jual");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
+        jLabel7.setText("Tgl_Pemasokan");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, -1, -1));
 
         tcari.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -271,8 +275,11 @@ public class forminputbarang extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Bradley Hand ITC", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Input Barang");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        jLabel1.setText("Stock Barang");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 60));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 230, 30));
 
         exit.setText("KEMBALI");
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -280,9 +287,12 @@ public class forminputbarang extends javax.swing.JFrame {
                 exitActionPerformed(evt);
             }
         });
-        jPanel2.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
+        jPanel1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 600, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 60));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Harga Jual");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -463,15 +473,15 @@ public class forminputbarang extends javax.swing.JFrame {
         FilterAngka(evt);
     }//GEN-LAST:event_tjumlahbarangKeyTyped
 
-    private void thargabeliKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_thargabeliKeyTyped
-        // TODO add your handling code here:
-        FilterAngka(evt);
-    }//GEN-LAST:event_thargabeliKeyTyped
-
     private void thargajualKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_thargajualKeyTyped
         // TODO add your handling code here:
         FilterAngka(evt);
     }//GEN-LAST:event_thargajualKeyTyped
+
+    private void thargabeliKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_thargabeliKeyTyped
+        // TODO add your handling code here:
+        FilterAngka(evt);
+    }//GEN-LAST:event_thargabeliKeyTyped
     
     /**
      * @param args the command line arguments
@@ -520,9 +530,11 @@ public class forminputbarang extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tabelinput;
     private javax.swing.JTextField tcari;
     private javax.swing.JTextField thargabeli;
