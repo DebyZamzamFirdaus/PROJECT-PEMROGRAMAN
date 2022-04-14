@@ -10,7 +10,7 @@ import java.net.URL;
 
 /**
  *
- * @author Rima Regiani
+ * 
  */
 public class formlaporan extends javax.swing.JFrame {
 

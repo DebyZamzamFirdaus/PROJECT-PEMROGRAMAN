@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Rima Regiani
+ * 
  */
 public class formmenu extends javax.swing.JFrame {
 

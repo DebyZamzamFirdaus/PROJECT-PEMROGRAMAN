@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 /**
  *
- * @author Rima Regiani
+ * 
  */
 public class koneksi {
      private static java.sql.Connection koneksi;

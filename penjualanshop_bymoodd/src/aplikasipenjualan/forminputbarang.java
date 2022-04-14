@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rima Regiani
+ * 
  */
 public class forminputbarang extends javax.swing.JFrame {
      private DefaultTableModel model;
