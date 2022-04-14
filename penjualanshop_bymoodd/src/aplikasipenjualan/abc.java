@@ -10,5 +10,5 @@ package aplikasipenjualan;
  * @author acer
  */
 public class abc {
-    //HAI
+    //HAI RIFA
 }
