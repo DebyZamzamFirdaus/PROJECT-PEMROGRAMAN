@@ -236,7 +236,7 @@ public class forminputbarang extends javax.swing.JFrame {
                 bhapusActionPerformed(evt);
             }
         });
-        jPanel1.add(bhapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 60, 100, 30));
+        jPanel1.add(bhapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 100, 30));
 
         tabelinput.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
