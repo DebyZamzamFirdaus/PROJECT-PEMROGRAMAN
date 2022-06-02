@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable1">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable2">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="99" green="99" red="99" type="rgb"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane3" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="167" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Id_Karyawan" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Nama_Karyawan" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Jenis_Kelamin" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="No_hp" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Alamat" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Bidang" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Waktu_Kerja" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="gaji" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtbidang" min="-2" pref="344" max="-2" attributes="0"/>
+                          <Component id="txtalamat" min="-2" pref="344" max="-2" attributes="0"/>
+                          <Component id="txtno_hp" min="-2" pref="344" max="-2" attributes="0"/>
+                          <Component id="txtnama_karyawan" min="-2" pref="344" max="-2" attributes="0"/>
+                          <Component id="txtid_karyawan" min="-2" pref="344" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="rLaki" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rPerempuan" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txtwaktu_kerja1" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
+                          <Component id="txtgaji" min="-2" pref="344" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                      <Component id="txtedit" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="txthapus" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="txtsimpan" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="145" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="49" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Id_Karyawan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtid_karyawan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Nama_Karyawan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtnama_karyawan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Jenis_Kelamin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rLaki" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rPerempuan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="No_hp" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtno_hp" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Alamat" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtalamat" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Bidang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtbidang" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Waktu_Kerja" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtwaktu_kerja1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtgaji" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="gaji" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="80" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txthapus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtedit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtsimpan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="jScrollPane3" min="-2" pref="146" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Bradley Hand ITC" size="36" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Karyawan"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[48, 15]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[48, 15]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[48, 15]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Id_Karyawan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Id_Karyawan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Nama_Karyawan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nama_Karyawan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Jenis_Kelamin">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jenis_Kelamin"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="No_hp">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No_hp"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Alamat">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Alamat"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Bidang">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bidang"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Waktu_Kerja">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Waktu_Kerja"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtid_karyawan">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtid_karyawanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnama_karyawan">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtno_hp">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtalamat">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtbidang">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtgaji">
+    </Component>
+    <Component class="javax.swing.JButton" name="txtedit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="edit"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txteditMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txteditActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="txtsimpan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="simpan"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtsimpanMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtsimpanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="txthapus">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="hapus"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txthapusMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txthapusActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable3">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="true" title="Id_Karyawan" type="java.lang.Object"/>
+                <Column editable="true" title="Nama_Karyawan" type="java.lang.Object"/>
+                <Column editable="true" title="Jenis_Kelamin" type="java.lang.Object"/>
+                <Column editable="true" title="No_Hp" type="java.lang.Object"/>
+                <Column editable="true" title="Alamat" type="java.lang.Object"/>
+                <Column editable="true" title="Bidang" type="java.lang.Object"/>
+                <Column editable="true" title="Waktu_Kerja" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable3MouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JRadioButton" name="rLaki">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LAKI-LAKI"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rPerempuan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PEREMPUAN"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="gaji">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gaji"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtwaktu_kerja1">
+    </Component>
+  </SubComponents>
+</Form>

@@ -142,15 +142,15 @@ public class forminputbarang extends javax.swing.JFrame {
         tcari = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         exit = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 51, 51));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -270,7 +270,7 @@ public class forminputbarang extends javax.swing.JFrame {
         });
         jPanel1.add(tcari, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 270, 30));
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Bradley Hand ITC", 1, 24)); // NOI18N
@@ -278,16 +278,22 @@ public class forminputbarang extends javax.swing.JFrame {
         jLabel1.setText("Stock Barang");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 60));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 230, 30));
-
-        exit.setText("KEMBALI");
+        exit.setText("Back");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitActionPerformed(evt);
             }
         });
-        jPanel1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 600, -1, -1));
+        jPanel2.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 60));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 230, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -309,7 +315,7 @@ public class forminputbarang extends javax.swing.JFrame {
     private void bsimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsimpanActionPerformed
         // TODO add your handling code here:
         if(tkdbarang.getText().equals("") ||tnamabarang.getText().equals("") || tjumlahbarang.getText().equals("")|| thargabeli.getText().equals("")|| thargajual.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "LENGKAPI DATA !", "elektronik berkah", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "LENGKAPI DATA !", "BY_MOODD", JOptionPane.INFORMATION_MESSAGE);
         }else{
             String kbarang = tkdbarang.getText();
             String nbarang = tnamabarang.getText();
@@ -348,7 +354,7 @@ public class forminputbarang extends javax.swing.JFrame {
                 thargabeli.setText("");
                 thargajual.setText("");
 
-                JOptionPane.showMessageDialog(null, "Data berhasil tersimpan", "elekronik berkah", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Data berhasil tersimpan", "BY_MOODD", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }//GEN-LAST:event_bsimpanActionPerformed
@@ -401,7 +407,7 @@ public class forminputbarang extends javax.swing.JFrame {
     private void beditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beditActionPerformed
         // TODO add your handling code here:
         if(tkdbarang.getText().equals("") ||tnamabarang.getText().equals("") || tjumlahbarang.getText().equals("")|| thargabeli.getText().equals("")|| thargajual.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "LENGKAPI DATA !", "elektronik berkah", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "LENGKAPI DATA !", "BY_MOODD", JOptionPane.INFORMATION_MESSAGE);
         }else{
         int i = tabelinput.getSelectedRow();
         if (i == -1) {
@@ -424,7 +430,7 @@ public class forminputbarang extends javax.swing.JFrame {
             thargabeli.setText("");
             thargajual.setText("");
             bsimpan.setEnabled(true);
-            JOptionPane.showMessageDialog(null, "Data berhasil diubah", "Elektronik Berkah", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Data berhasil diubah", "BY_MOODD", JOptionPane.INFORMATION_MESSAGE);
         }
         }
     }//GEN-LAST:event_beditActionPerformed
@@ -482,6 +488,10 @@ public class forminputbarang extends javax.swing.JFrame {
         // TODO add your handling code here:
         FilterAngka(evt);
     }//GEN-LAST:event_thargabeliKeyTyped
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
     
     /**
      * @param args the command line arguments

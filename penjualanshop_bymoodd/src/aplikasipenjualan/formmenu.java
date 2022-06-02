@@ -32,13 +32,14 @@ public class formmenu extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        register = new javax.swing.JButton();
+        penjualan = new javax.swing.JButton();
+        laporan = new javax.swing.JButton();
+        input = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -46,42 +47,52 @@ public class formmenu extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 51, 51));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Register");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        register.setText("Karyawan");
+        register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                registerActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 60));
+        jPanel2.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 60));
 
-        jButton2.setText("Transaksi");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        penjualan.setText("Penjualan");
+        penjualan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                penjualanMouseClicked(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 160, 60));
-
-        jButton3.setText("Laporan");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        penjualan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                penjualanActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 160, 60));
+        jPanel2.add(penjualan, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 160, 60));
 
-        jButton5.setText("Input Barang");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+        laporan.setText("Laporan");
+        laporan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                laporanMouseClicked(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 160, 60));
+        laporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laporanActionPerformed(evt);
+            }
+        });
+        jPanel2.add(laporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 160, 60));
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        input.setText("Input Barang");
+        input.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputActionPerformed(evt);
+            }
+        });
+        jPanel2.add(input, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 160, 60));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Bradley Hand ITC", 1, 24)); // NOI18N
@@ -99,45 +110,67 @@ public class formmenu extends javax.swing.JFrame {
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 60));
 
+        jButton6.setText("Register");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 60));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
         // TODO add your handling code here:
-        formregister fb = new formregister();
+        formkaryawan fb = new formkaryawan();
         fb.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_registerActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void penjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_penjualanActionPerformed
         // TODO add your handling code here:
-        formbeli fb = new formbeli();
+        penjualan fb = new penjualan();
         fb.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_penjualanActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void laporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laporanActionPerformed
         // TODO add your handling code here:
         formlaporan fb = new   formlaporan();
         fb.setVisible(true);
         this.setVisible(false);                 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_laporanActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-         if (JOptionPane.showConfirmDialog(null, "Yakin ingin keluar?", "Pelabuha App", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+         if (JOptionPane.showConfirmDialog(null, "Yakin ingin keluar?", "Message", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                  this.setVisible(false);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputActionPerformed
         // TODO add your handling code here:
         forminputbarang fb = new   forminputbarang();
         fb.setVisible(true);
         this.setVisible(false); 
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_inputActionPerformed
+
+    private void laporanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laporanMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_laporanMouseClicked
+
+    private void penjualanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_penjualanMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_penjualanMouseClicked
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,14 +208,15 @@ public class formmenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton input;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton laporan;
+    private javax.swing.JButton penjualan;
+    private javax.swing.JButton register;
     // End of variables declaration//GEN-END:variables
 }

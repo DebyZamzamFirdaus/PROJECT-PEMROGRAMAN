@@ -13,13 +13,13 @@ import javax.swing.table.DefaultTableModel;
  *
  *  @author
  */
-public class formregister extends javax.swing.JFrame {
+public class formkaryawan extends javax.swing.JFrame {
         private DefaultTableModel model;
 
     /**
      * Creates new form formregister
      */
-    public formregister() {
+    public formkaryawan() {
         initComponents();
         model = new DefaultTableModel();
 
@@ -35,9 +35,9 @@ public class formregister extends javax.swing.JFrame {
         loadData();
     }
     public void loadData() {
-       jButton1.setEnabled(true);
-        jButton2.setEnabled(false);
-        jTextField1.setEnabled(true);
+       tambah.setEnabled(true);
+        ubah.setEnabled(false);
+        nama.setEnabled(true);
         model.getDataVector().removeAllElements();
         model.fireTableDataChanged();
 
@@ -77,67 +77,71 @@ public class formregister extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        hapus = new javax.swing.JButton();
+        tambah = new javax.swing.JButton();
+        ubah = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelbarang = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        gaji = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        nama = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        notelp = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        alamat = new javax.swing.JTextField();
+        notlp = new javax.swing.JTextField();
         agama = new javax.swing.JComboBox<>();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        alamat = new javax.swing.JTextArea();
         laki = new javax.swing.JRadioButton();
         perempuan = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        retype = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
+        idkaryawan = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        username1 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        email1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setText("Hapus");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        hapus.setText("Hapus");
+        hapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                hapusActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 90, 40));
+        jPanel1.add(hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 90, 40));
 
-        jButton1.setText("Tambah");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        tambah.setText("Tambah");
+        tambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                tambahActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 100, 40));
+        jPanel1.add(tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 100, 40));
 
-        jButton2.setText("Ubah");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ubah.setText("Ubah");
+        ubah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ubahActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 100, 40));
+        jPanel1.add(ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 100, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Alamat  ");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 100, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 100, -1));
 
         tabelbarang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -162,51 +166,48 @@ public class formregister extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Jenis Kelamin   ");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 100, -1));
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 170, 30));
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 170, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 100, -1));
+        jPanel1.add(gaji, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 170, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Username   ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 80, -1));
+        jLabel1.setText("Nama");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 80, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password    ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Retype       ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 170, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 80, -1));
+        jPanel1.add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 170, 30));
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                passwordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 170, 30));
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 170, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText(" Email      ");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 100, -1));
+        jLabel8.setText("Gaji");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 100, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("No. Telp  ");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 100, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Agama  ");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 100, -1));
-        jPanel1.add(notelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 170, 30));
-
-        jTextField4.setText("jTextField3");
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 170, 30));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 100, -1));
+        jPanel1.add(alamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 170, 30));
+        jPanel1.add(notlp, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 170, 30));
 
         agama.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Islam", "Khatolik", "Protestan", "KhongHuCu", "Budha", "Hindu" }));
         agama.addActionListener(new java.awt.event.ActionListener() {
@@ -214,13 +215,7 @@ public class formregister extends javax.swing.JFrame {
                 agamaActionPerformed(evt);
             }
         });
-        jPanel1.add(agama, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 170, 30));
-
-        alamat.setColumns(20);
-        alamat.setRows(5);
-        jScrollPane2.setViewportView(alamat);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 170, 100));
+        jPanel1.add(agama, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 170, 30));
 
         buttonGroup1.add(laki);
         laki.setForeground(new java.awt.Color(255, 255, 255));
@@ -230,19 +225,19 @@ public class formregister extends javax.swing.JFrame {
                 lakiActionPerformed(evt);
             }
         });
-        jPanel1.add(laki, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
+        jPanel1.add(laki, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
 
         buttonGroup1.add(perempuan);
         perempuan.setForeground(new java.awt.Color(255, 255, 255));
         perempuan.setText("Perempuan");
-        jPanel1.add(perempuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
+        jPanel1.add(perempuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Bradley Hand ITC", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Input Admin");
+        jLabel3.setText("Input Karyawan");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         jButton3.setText("Back");
@@ -255,11 +250,36 @@ public class formregister extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 50));
 
+        retype.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retypeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(retype, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 170, 30));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("ID Karyawan");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 80, -1));
+        jPanel1.add(idkaryawan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 170, 30));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Username   ");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 80, -1));
+        jPanel1.add(username1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 170, 30));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText(" Email      ");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 100, -1));
+        jPanel1.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 170, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
+            .addGap(0, 836, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -279,13 +299,13 @@ public class formregister extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
         // TODO add your handling code here:
-        if(jTextField1.getText().equals("") ||jPasswordField1.getText().equals("") || laki.getText().equals("")|| email.getText().equals("")|| notelp.getText().equals("")|| agama.getSelectedItem().equals("")|| alamat.getText().equals("")){
+        if(nama.getText().equals("") ||password.getText().equals("") || laki.getText().equals("")|| gaji.getText().equals("")|| alamat.getText().equals("")|| agama.getSelectedItem().equals("")|| alamat.getText().equals("")){
             JOptionPane.showMessageDialog(null, "LENGKAPI DATA !", "SHOP BY_MOODD", JOptionPane.INFORMATION_MESSAGE);
         }else{
         try {
-            String sql ="delete from tbl_login where username='"+jTextField1.getText()+"'";
+            String sql ="delete from tbl_login where username='"+nama.getText()+"'";
             java.sql.Connection conn=(Connection)koneksi.getKoneksi();
             java.sql.PreparedStatement pst=conn.prepareStatement(sql);
             pst.execute();
@@ -294,22 +314,22 @@ public class formregister extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
         loadData();
-        jTextField1.setText("");
-        jPasswordField1.setText("");
-        jPasswordField2.setText("");
+        nama.setText("");
+        password.setText("");
+        alamat.setText("");
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_hapusActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahActionPerformed
         // TODO add your handling code here:
-        if(jTextField1.getText().equals("") ||jPasswordField1.getText().equals("") || laki.getText().equals("")|| email.getText().equals("")|| notelp.getText().equals("")|| agama.getSelectedItem().equals("")|| alamat.getText().equals("")){
+        if(nama.getText().equals("") ||password.getText().equals("") || laki.getText().equals("")|| gaji.getText().equals("")|| alamat.getText().equals("")|| agama.getSelectedItem().equals("")|| alamat.getText().equals("")){
             JOptionPane.showMessageDialog(null, "LENGKAPI DATA !", "SHOP BY_MOODD", JOptionPane.INFORMATION_MESSAGE);
         }else{
-            String user = jTextField1.getText();
-            String pass = jPasswordField1.getText();
+            String user = nama.getText();
+            String pass = password.getText();
 
-            String emaill = email.getText();
-            String notelpp = notelp.getText();
+            String emaill = gaji.getText();
+            String notelpp = alamat.getText();
             String agamaa = (String) agama.getSelectedItem();
             String alamatt = alamat.getText();
             String jk ="";
@@ -337,12 +357,12 @@ public class formregister extends javax.swing.JFrame {
                 System.out.println("Terjadi Error");
             } finally {
                 loadData();
-                jTextField1.setText("");
-                jPasswordField1.setText("");
-                jPasswordField2.setText("");
+                nama.setText("");
+                password.setText("");
+                alamat.setText("");
                 buttonGroup1.clearSelection();
-                email.setText("");
-                notelp.setText("");
+                gaji.setText("");
+                alamat.setText("");
                 agama.setSelectedItem("");
                 alamat.setText("");
 
@@ -350,9 +370,9 @@ public class formregister extends javax.swing.JFrame {
             }
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_tambahActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahActionPerformed
         // TODO add your handling code here:
         int i = tabelbarang.getSelectedRow();
         if (i == -1) {
@@ -367,7 +387,7 @@ public class formregister extends javax.swing.JFrame {
             }else{
                 jk = perempuan.getText();
             }
-            String sql = "UPDATE  tbl_login SET password =  '" + jPasswordField1.getText() + "', jenis_kelamin='"+ jk +"' WHERE  username ='" + user + "'";
+            String sql = "UPDATE  tbl_login SET password =  '" + password.getText() + "', jenis_kelamin='"+ jk +"' WHERE  username ='" + user + "'";
             PreparedStatement p = c.prepareStatement(sql);
             p.executeUpdate();
             p.close();
@@ -375,36 +395,36 @@ public class formregister extends javax.swing.JFrame {
             System.out.println("Terjadi Error");
         } finally {
             loadData();
-            jTextField1.setText("");
-            jPasswordField1.setText("");
-            jPasswordField2.setText("");
+            nama.setText("");
+            password.setText("");
+            alamat.setText("");
             buttonGroup1.clearSelection();
-            email.setText("");
-            notelp.setText("");
+            gaji.setText("");
+            alamat.setText("");
             agama.setSelectedItem("");
             alamat.setText("");
-            jButton1.setEnabled(true);
+            tambah.setEnabled(true);
             JOptionPane.showMessageDialog(null, "Data berhasil diubah", "Pelabuhan App", JOptionPane.INFORMATION_MESSAGE);
-            jTextField1.requestFocus();
+            nama.requestFocus();
         }
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ubahActionPerformed
 
     private void tabelbarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelbarangMouseClicked
         // TODO add your handling code here:
-        jButton1.setEnabled(false);
-        jButton2.setEnabled(true);
-        jTextField1.setEnabled(false);
+        tambah.setEnabled(false);
+        ubah.setEnabled(true);
+        nama.setEnabled(false);
         int i = tabelbarang.getSelectedRow();
         if (i == -1) {
             return;
         }
         String user = (String) model.getValueAt(i, 0);
-        jTextField1.setText(user);
+        nama.setText(user);
 
         String pass = (String) model.getValueAt(i, 1);
-        jPasswordField1.setText(pass);
-        jPasswordField2.setText(pass);
+        password.setText(pass);
+        alamat.setText(pass);
 
         String jk = (String) model.getValueAt(i, 2);
         String l ="Laki-Laki";
@@ -415,10 +435,10 @@ public class formregister extends javax.swing.JFrame {
         }
 
         String emaill = (String) model.getValueAt(i, 3);
-        email.setText(emaill);
+        gaji.setText(emaill);
 
         String notelpp = (String) model.getValueAt(i, 4);
-        notelp.setText(notelpp);
+        alamat.setText(notelpp);
 
         String agamaa = (String) model.getValueAt(i, 5);
         agama.setSelectedItem(agamaa);
@@ -427,9 +447,9 @@ public class formregister extends javax.swing.JFrame {
         alamat.setText(alamatt);
     }//GEN-LAST:event_tabelbarangMouseClicked
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_passwordActionPerformed
 
     private void lakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lakiActionPerformed
         // TODO add your handling code here:
@@ -446,6 +466,10 @@ public class formregister extends javax.swing.JFrame {
         au.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void retypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_retypeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -464,53 +488,58 @@ public class formregister extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(formregister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formkaryawan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(formregister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formkaryawan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(formregister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formkaryawan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(formregister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formkaryawan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new formregister().setVisible(true);
+                new formkaryawan().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> agama;
-    private javax.swing.JTextArea alamat;
+    private javax.swing.JTextField alamat;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JTextField email;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField email1;
+    private javax.swing.JTextField gaji;
+    private javax.swing.JButton hapus;
+    private javax.swing.JTextField idkaryawan;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JRadioButton laki;
-    private javax.swing.JTextField notelp;
+    private javax.swing.JTextField nama;
+    private javax.swing.JTextField notlp;
+    private javax.swing.JPasswordField password;
     private javax.swing.JRadioButton perempuan;
+    private javax.swing.JPasswordField retype;
     private javax.swing.JTable tabelbarang;
+    private javax.swing.JButton tambah;
+    private javax.swing.JButton ubah;
+    private javax.swing.JTextField username1;
     // End of variables declaration//GEN-END:variables
 }

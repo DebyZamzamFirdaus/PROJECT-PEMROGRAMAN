@@ -31,33 +31,38 @@ public class formlaporan extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        databarang = new javax.swing.JButton();
+        penjualan = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("LAPORAN DATA BARANG");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        databarang.setText("LAPORAN DATA BARANG");
+        databarang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                databarangActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 210, 60));
+        jPanel1.add(databarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 210, 60));
 
-        jButton2.setText("LAPORAN PENJUALAN");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        penjualan.setText("LAPORAN PENJUALAN");
+        penjualan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                penjualanMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 210, 60));
+        penjualan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                penjualanActionPerformed(evt);
+            }
+        });
+        jPanel1.add(penjualan, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 210, 60));
 
-        jButton3.setText("kembali");
+        jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -77,23 +82,30 @@ public class formlaporan extends javax.swing.JFrame {
         this.setVisible(false);   
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void databarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_databarangActionPerformed
         // TODO add your handling code here:
         try{
             Desktop.getDesktop().browse(new URL("http://localhost:81/shop_bymoodd/print.php").toURI());
             } catch (Exception e){
                 System.out.println(e);
             }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_databarangActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void penjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_penjualanActionPerformed
         // TODO add your handling code here:
-        try{
-            Desktop.getDesktop().browse(new URL("http://localhost:81/shop_bymoodd/lappenjualan.php").toURI());
-            } catch (Exception e){
-                System.out.println(e);
-            }
-    }//GEN-LAST:event_jButton2ActionPerformed
+        //try{
+            //Desktop.getDesktop().browse(new URL("http://localhost:81/shop_bymoodd/lappenjualan.php").toURI());
+            //} catch (Exception e){
+              //  System.out.println(e);
+            //}
+    }//GEN-LAST:event_penjualanActionPerformed
+
+    private void penjualanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_penjualanMouseClicked
+        // TODO add your handling code here:
+        tbl_laporan fb = new tbl_laporan();
+        fb.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_penjualanMouseClicked
 
     /**
      * @param args the command line arguments
@@ -131,9 +143,9 @@ public class formlaporan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton databarang;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton penjualan;
     // End of variables declaration//GEN-END:variables
 }
